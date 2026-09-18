@@ -1,0 +1,21 @@
+{
+  "name": "Caineng.Playground.Tests.EditMode",
+  "rootNamespace": "Caineng.Playground.Tests",
+  "references": [
+    "Caineng.Playground.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includeTestAssemblies": true
+}

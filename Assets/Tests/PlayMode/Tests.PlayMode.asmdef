@@ -1,0 +1,19 @@
+{
+  "name": "Caineng.Playground.Tests.PlayMode",
+  "rootNamespace": "Caineng.Playground.Tests",
+  "references": [
+    "Caineng.Playground.Runtime"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includeTestAssemblies": true
+}

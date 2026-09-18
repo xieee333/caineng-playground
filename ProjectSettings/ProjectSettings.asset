@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!129 &1
+PlayerSettings:
+  serializedVersion: 26
+  productGUID: 8f0c4f1d7a3b4b948a5ef5d1a0d0d3c2
+  AndroidProfiler: 0
+  AndroidFilterTouchesWhenObscured: 0
+  defaultScreenOrientation: 4
+  useOSAutorotation: 1
+  companyName: Caineng Playground
+  productName: 彩能游乐场
+  applicationIdentifier:
+    Standalone: com.caineng.playground
+  activeInputHandler: 1
+  scriptingBackend:
+    Standalone: 1
