@@ -10,3 +10,9 @@
 - 狂欢事件、玩具化枪械和多维度正向结算
 
 设计规格见 [`docs/superpowers/specs/2026-09-18-caineng-playground-design.md`](docs/superpowers/specs/2026-09-18-caineng-playground-design.md)。
+
+项目路线和实时进度：
+
+- [`docs/ROADMAP.md`](docs/ROADMAP.md)
+- [`docs/PROGRESS.md`](docs/PROGRESS.md)
+- [`docs/superpowers/specs/2026-09-18-caineng-playground-weapon-direction-design.md`](docs/superpowers/specs/2026-09-18-caineng-playground-weapon-direction-design.md)
