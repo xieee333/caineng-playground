@@ -7,7 +7,12 @@ namespace Caineng.Playground.Gameplay
     public sealed class PlayerInputRouter : MonoBehaviour
     {
         private PlayerMotor motor;
-        private void Awake() => motor = GetComponent<PlayerMotor>();
+        private BloomAbility bloomAbility;
+        private void Awake()
+        {
+            motor = GetComponent<PlayerMotor>();
+            bloomAbility = GetComponent<BloomAbility>();
+        }
 
         private void Update()
         {
@@ -20,6 +25,7 @@ namespace Caineng.Playground.Gameplay
             if (keyboard.aKey.isPressed) input.x -= 1f;
             motor.SetMoveInput(input);
             if (keyboard.spaceKey.wasPressedThisFrame) motor.RequestJump();
+            if (keyboard.qKey.wasPressedThisFrame) bloomAbility?.TryActivate();
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Caineng.Playground.Gameplay
 {
-    public enum PlayerMovementState { Grounded, Airborne, Submerged, Bubble }
+    public enum PlayerMovementState { Grounded, Airborne, Submerged, Recalling }
 
     [RequireComponent(typeof(CharacterController))]
     public sealed class PlayerMotor : MonoBehaviour
@@ -20,26 +20,37 @@ namespace Caineng.Playground.Gameplay
         private Vector2 moveInput;
         private float verticalVelocity;
         private bool jumpRequested;
-        private bool bubbleLocked;
+        private bool respawnLocked;
+        private bool surfaceOverride;
 
         public event Action<PlayerMovementState, PlayerMovementState> StateChanged;
         public PlayerMovementState CurrentState { get; private set; } = PlayerMovementState.Airborne;
         public Vector3 Velocity { get; private set; }
         public float BaseMoveSpeed => moveSpeed;
+        public SurfaceKind CurrentSurface => currentSurface;
 
         private void Awake() => controller = GetComponent<CharacterController>();
         private void Update() => Simulate(Time.deltaTime);
 
         public void SetMoveInput(Vector2 input) => moveInput = Vector2.ClampMagnitude(input, 1f);
         public void RequestJump() => jumpRequested = true;
-        public void SetSurface(SurfaceKind surface) => currentSurface = surface;
-
-        public void SetBubbleState(bool isBubble)
+        public void SetSurface(SurfaceKind surface)
         {
-            bubbleLocked = isBubble;
+            currentSurface = surface;
+            surfaceOverride = true;
+        }
+
+        public void ClearSurfaceOverride()
+        {
+            surfaceOverride = false;
+        }
+
+        public void SetRespawnState(bool isRespawning)
+        {
+            respawnLocked = isRespawning;
             moveInput = Vector2.zero;
             verticalVelocity = 0f;
-            SetState(isBubble ? PlayerMovementState.Bubble : PlayerMovementState.Airborne);
+            SetState(isRespawning ? PlayerMovementState.Recalling : PlayerMovementState.Airborne);
         }
 
         public void Teleport(Vector3 position)
@@ -53,14 +64,15 @@ namespace Caineng.Playground.Gameplay
 
         private void Simulate(float deltaTime)
         {
-            if (bubbleLocked)
+            if (respawnLocked)
             {
                 Velocity = Vector3.zero;
-                SetState(PlayerMovementState.Bubble);
+                SetState(PlayerMovementState.Recalling);
                 jumpRequested = false;
                 return;
             }
 
+            if (!surfaceOverride) DetectSurfaceBelow();
             var result = traversal.Resolve(currentSurface, moveSpeed);
             var planar = new Vector3(moveInput.x, 0f, moveInput.y) * result.SpeedMultiplier;
             var grounded = controller.isGrounded;
@@ -72,7 +84,15 @@ namespace Caineng.Playground.Gameplay
             }
             else
             {
-                if (grounded && verticalVelocity < 0f) verticalVelocity = -2f;
+                if (grounded && currentSurface == SurfaceKind.Bounce)
+                {
+                    verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity) * 1.25f;
+                    grounded = false;
+                }
+                else if (grounded && verticalVelocity < 0f)
+                {
+                    verticalVelocity = currentSurface == SurfaceKind.Float ? -0.35f : -2f;
+                }
                 if (grounded && jumpRequested)
                 {
                     verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
@@ -85,6 +105,21 @@ namespace Caineng.Playground.Gameplay
             jumpRequested = false;
             Velocity = new Vector3(planar.x, verticalVelocity, planar.z);
             controller.Move(Velocity * deltaTime);
+        }
+
+        private void DetectSurfaceBelow()
+        {
+            var origin = transform.position + Vector3.up * 0.2f;
+            var distance = controller.height * 0.75f + 0.5f;
+            if (Physics.Raycast(origin, Vector3.down, out var hit, distance, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
+            {
+                var surface = hit.collider.GetComponentInParent<TraversalSurface>();
+                currentSurface = surface != null ? surface.Kind : SurfaceKind.None;
+            }
+            else
+            {
+                currentSurface = SurfaceKind.None;
+            }
         }
 
         private void SetState(PlayerMovementState next)

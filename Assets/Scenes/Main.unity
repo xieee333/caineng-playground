@@ -342,6 +342,8 @@ GameObject:
   - component: {fileID: 400006}
   - component: {fileID: 400007}
   - component: {fileID: 400008}
+  - component: {fileID: 400009}
+  - component: {fileID: 400010}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -451,6 +453,47 @@ MonoBehaviour:
   respawnDelay: 3
   respawnPoint: {fileID: 0}
   fallThreshold: -6
+--- !u!114 &400009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  serializedVersion: 3
+  m_Script: {fileID: 11500000, guid: c1d2e3f40516273849a0b1c2d3e4f506, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  aimCamera: {fileID: 100002}
+  sprayKind: 1
+  maxRange: 40
+  cooldown: 0.08
+  hitMask: -5
+  gridWidth: 18
+  gridDepth: 18
+  cellSize: 1
+  gridOrigin: {x: -9, y: 0, z: -9}
+  maxVisualMarks: 120
+  markSize: 0.16
+--- !u!114 &400010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  serializedVersion: 3
+  m_Script: {fileID: 11500000, guid: d2e3f40516273849a0b1c2d3e4f50617, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  radius: 3.5
+  activeDuration: 0.8
+  cooldown: 5
+  bloomSurface: 2
 --- !u!1 &500000
 GameObject:
   m_ObjectHideFlags: 0
