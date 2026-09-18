@@ -65,7 +65,9 @@ namespace Caineng.Playground.Tests
             Assert.That(player.GetComponent<RespawnController>(), Is.Not.Null);
             Assert.That(player.GetComponent<SprayEmitter>(), Is.Not.Null);
             Assert.That(player.GetComponent<BloomAbility>(), Is.Not.Null);
+            Assert.That(player.GetComponent<PrismSprayerView>(), Is.Not.Null);
             Assert.That(GameObject.Find("Prototype HUD"), Is.Not.Null);
+            Assert.That(GameObject.Find("Prism Sprayer View"), Is.Not.Null);
             Assert.That(GameObject.Find("Ground"), Is.Not.Null);
             Assert.That(GameObject.Find("BouncePad"), Is.Not.Null);
             Assert.That(GameObject.Find("Graybox Arena"), Is.Not.Null);

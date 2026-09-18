@@ -23,6 +23,7 @@ PlayMode 用例覆盖：
 - 反弹表面实际发射玩家。
 - 飘浮表面使用较轻的贴地重力。
 - Q 键盛放脉冲临时改变附近表面，并在持续时间后恢复。
+- Main 场景生成第一人称棱花喷绘器占位模型，并能观察喷涂后坐反馈。
 
 ## 可观测验收
 
@@ -33,11 +34,12 @@ PlayMode 用例覆盖：
 - [x] 折返视觉为青/洋红/黄色分层残像，不再创建球形泡泡。
 - [x] 测试确认 `Color Rewind Visual` 在折返时生成。
 - [x] 测试确认 `Bloom Pulse` 在技能期间生成并在结束后销毁。
+- [x] 测试确认 `Prism Sprayer View` 在 Main 场景中生成。
 
 ## 原始结果文件
 
 - EditMode：`D:\代码\caineng-playground-verify\TestResults\editmode-observable.xml`
-- PlayMode：`D:\代码\caineng-playground-verify\TestResults\playmode-bloom-v5.xml`
+- PlayMode：`D:\代码\caineng-playground-verify\TestResults\playmode-weapon.xml`
 
 ## 本轮修改
 
@@ -45,4 +47,5 @@ PlayMode 用例覆盖：
 - `PlayerMotor`：将 Bubble 状态改为 Recalling 状态。
 - `PrototypeHud`：加入运行时诊断信息。
 - `BloomAbility`：加入 Q 键范围脉冲和临时表面改变。
+- `PrismSprayerView`：加入第一人称棱花喷绘器占位和后坐反馈。
 - `PlayerTraversalPlayModeTests`：加入可观测 HUD 和分层残像验收。

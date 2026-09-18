@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 400008}
   - component: {fileID: 400009}
   - component: {fileID: 400010}
+  - component: {fileID: 400011}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -494,6 +495,21 @@ MonoBehaviour:
   activeDuration: 0.8
   cooldown: 5
   bloomSurface: 2
+--- !u!114 &400011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  serializedVersion: 3
+  m_Script: {fileID: 11500000, guid: e3f40516273849a0b1c2d3e4f5061728, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  viewCamera: {fileID: 100002}
+  localPosition: {x: 0.48, y: -0.32, z: 0.75}
 --- !u!1 &500000
 GameObject:
   m_ObjectHideFlags: 0
