@@ -16,7 +16,7 @@ namespace Caineng.Playground.Gameplay
 
             GUI.Label(
                 new Rect(24f, 20f, 720f, 80f),
-                "彩能游乐场 · 第一把枪灰盒\nWASD 移动　Space 跳跃",
+                "彩能游乐场 · 移动与泡泡重生灰盒\nWASD 移动　Space 跳跃　跌落后 3 秒泡泡重生",
                 style);
         }
     }

@@ -340,6 +340,8 @@ GameObject:
   - component: {fileID: 400004}
   - component: {fileID: 400005}
   - component: {fileID: 400006}
+  - component: {fileID: 400007}
+  - component: {fileID: 400008}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -422,6 +424,33 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &400007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b6c7d8e9f04112a3b4c5d6e7f80910, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &400008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c7d8e9f0014234b5c6d7e8f9011223, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  respawnDelay: 3
+  respawnPoint: {fileID: 0}
+  fallThreshold: -6
 --- !u!1 &500000
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 500001}
   - component: {fileID: 500002}
+  - component: {fileID: 500003}
   m_Layer: 0
   m_Name: Prototype HUD
   m_TagString: Untagged
@@ -465,6 +495,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   serializedVersion: 3
   m_Script: {fileID: 11500000, guid: 4a8c3d6f50ac6f3cd4d5e6f708192a3b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &500003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d8e9f001124356c7d8e9f001122334, type: 3}
   m_Name:
   m_EditorClassIdentifier:
 --- !u!1 &600000
