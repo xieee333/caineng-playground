@@ -8,6 +8,19 @@
 [Tt]est[Rr]esults/
 [Uu]ser[Ss]ettings/
 
+# Unreal Engine generated folders
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+DefaultEditorPerProjectUserSettings.ini
+
 # IDE files
 .vs/
 .idea/
