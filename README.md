@@ -4,10 +4,13 @@
 
 ## 从这里开始（2026-09-21 更新）
 
+其他 AI 接手先读 [AGENTS.md](AGENTS.md)，再按其中顺序查阅最新文档。
+
 - **先看画风与玩法：** [异常街区重新设计](docs/superpowers/specs/2026-09-21-anomaly-district-design.md)。包括发明家人物、世界观、枪械反制、地图与模式。
 - **看先做什么：** [开发路线](docs/ROADMAP.md)。
 - **看现在做到哪：** [进度](docs/PROGRESS.md)。
 - **准备使用 UE：** [UE 修订阶段计划](docs/superpowers/plans/2026-09-21-anomaly-district-ue.md)。
+- **制作人物、枪械与场景：** [Blender + Hyper3D + UE 资产流程](docs/assets/ASSET_PIPELINE.md)。包含分工、制作顺序、文件规范和验收清单。
 
 新版建议：第三人称、先 4 人后 6 人、6 分钟设备对抗、快速复活。首轮做矢量脉冲器、相变凝胶枪、空中冲刺、三件道具和研究站地图；之后复用它们验证异常试跑。具体数值与模式是原型方案，并非已实现。
 
