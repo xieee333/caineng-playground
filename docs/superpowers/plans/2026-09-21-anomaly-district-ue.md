@@ -4,6 +4,8 @@
 
 **目标：** 验证两把能改变战局的枪，再完成风格化 3D 对战切片和一个可切换的试跑原型。
 
+**枪械规则来源：** [战斗与功能完整规格](../specs/2026-09-21-weapon-combat-function-design.md)。两枪各自能量/冷却、直接火力、功能代价和有效击退助攻均按该文实现；后两把枪仍属扩展。
+
 **资产流程：** 按 [Blender + Hyper3D + UE 规范](../../assets/ASSET_PIPELINE.md) 执行。规范文档已存在，P0 需验证并补入实际版本与结果，不要重新覆盖成另一套流程。
 
 **架构：** 复用角色、武器、道具、场景交互；按模式单独管理目标、伤害和结算。服务器统一判定状态，客户端表现结果。
@@ -23,6 +25,8 @@
 | `Content/Caineng/Modes/BP_TrialMode.uasset` | 顺序检查点、圈数、试跑排名 |
 | `Content/Caineng/Characters/BP_CPGCharacter.uasset` | 基础移动、镜头、冲刺入口 |
 | `Content/Caineng/Characters/BP_CombatComponent.uasset` | 生命与受击、控制减弱 |
+| `Content/Caineng/Characters/BP_EquipmentComponent.uasset` | 两枪切换、保留各枪资源和攻击间隔 |
+| `Content/Caineng/Core/BP_ContributionTracker.uasset` | 按受害者生命 ID 记录伤害与有效击退贡献，服务器去重计分 |
 | `Content/Caineng/Weapons/BP_VectorWeapon.uasset` | 脉冲射击与受限推动 |
 | `Content/Caineng/Weapons/BP_GelWeapon.uasset` | 凝胶攻击与指定地块部署 |
 | `Content/Caineng/World/BPI_AnomalyInteractable.uasset` | 有类型的交互入口，不对所有物件自由施力 |
@@ -57,6 +61,9 @@
 
 ## P2 两把枪证明战局变化
 
+- [ ] 先按枪械专项参数实现两把基础攻击，在无机关靶场验证伤害、射速、能量和独立击败能力。
+- [ ] 接入两枪切换，验证不能通过切换刷新能量、跳过攻击间隔或清除特殊冷却。
+
 - [ ] 实现矢量宽幅攻击、遮挡检查、有限特殊脉冲、能量与冷却。
 - [ ] 实现凝胶弹与两块地块上限，部署前检查目标类型、距离、视线；失败不扣资源。
 - [ ] 实现弹性地块的 8 秒恢复和可破坏节点；实现一个可移动屏障。
@@ -77,6 +84,8 @@
 验收：每种强效果有提示、结束条件和反制；模拟延迟下重复 20 次关键互动无重复引爆。保存 `docs/testing/P3-anomaly-interactions.md`。
 
 ## P4 四人设备对抗
+
+- [ ] 实现枪械专项第 10 节的伤害与有效击退助攻，分别测试窗口外、位移不足、碰撞阻挡、自主移动、多股外力和复活去重案例。
 
 - [ ] 搭建研究站灰盒，保证高点两条接近路线和边缘安全出生点。
 - [ ] 接入局域网创建/加入/满房/离开/房主退出提示；房主退出则结束房间，不实现主机迁移。

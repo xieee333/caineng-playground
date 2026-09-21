@@ -7,6 +7,7 @@
 其他 AI 接手先读 [AGENTS.md](AGENTS.md)，再按其中顺序查阅最新文档。
 
 - **先看画风与玩法：** [异常街区重新设计](docs/superpowers/specs/2026-09-21-anomaly-district-design.md)。包括发明家人物、世界观、枪械反制、地图与模式。
+- **看枪怎么打、功能何时用：** [枪械战斗与功能完整规格](docs/superpowers/specs/2026-09-21-weapon-combat-function-design.md)。包含两枪配置、四把枪的攻击与功能、代价、反制、计分和测试。
 - **看先做什么：** [开发路线](docs/ROADMAP.md)。
 - **看现在做到哪：** [进度](docs/PROGRESS.md)。
 - **准备使用 UE：** [UE 修订阶段计划](docs/superpowers/plans/2026-09-21-anomaly-district-ue.md)。

@@ -4,6 +4,7 @@
 
 1. `docs/PROGRESS.md`：确认实际完成状态，不能把计划当实现。
 2. `docs/superpowers/specs/2026-09-21-anomaly-district-design.md`：当前世界观、画风、人物与玩法。
+   枪械专项必读 `docs/superpowers/specs/2026-09-21-weapon-combat-function-design.md`：覆盖旧单枪配置、基础攻击和助攻规则，明确两枪切换、每枪战斗与功能、数值和验收。
 3. `docs/assets/ASSET_PIPELINE.md`：Blender、Hyper3D、UE 的分工、制作流程与交付标准。
 4. `docs/superpowers/plans/2026-09-21-anomaly-district-ue.md`：当前工程阶段计划。
 

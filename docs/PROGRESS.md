@@ -10,9 +10,12 @@
 - 视觉参考：**用户最新发明家人物图；精致风格化 3D。取消 v11 波普漫画和二维动漫基线；实机尚未验证**
 - 新版设计：`docs/superpowers/specs/2026-09-21-anomaly-district-design.md`
 - 新版计划：`docs/superpowers/plans/2026-09-21-anomaly-district-ue.md`
+- 枪械专项：`docs/superpowers/specs/2026-09-21-weapon-combat-function-design.md`；最新两枪配置、伤害、功能与助攻规则以此为准。
 - 资产制作规范：`docs/assets/ASSET_PIPELINE.md`；AI 接手入口：根目录 `AGENTS.md`。
 
 ## 当前阶段清单
+
+- [x] 四把枪的基础战斗与功能完整规格、初始参数、代价、反制、计分和验收案例；仅前两把进入首轮。
 
 - [x] Blender、Hyper3D、UE 分工与 AI 交接规范。
 - [ ] 参考图长期保存、生成可用性核实、首次资产制作流程实测。
@@ -32,6 +35,9 @@
 - [ ] P6：六人容量、公网、性能和测试包。
 
 ## 2026-09-21 第二次修订
+
+- 补齐枪械战斗/功能双重职责，采用两枪随身配置并细化功能贡献规则；同步 AI 入口、世界概览与 UE 计划。
+- 枪械专项链接和 Git 空白检查通过；四把枪的理论命中次数与击败时间已按公式复算。数值仍为初始设计，未做游戏平衡实测。
 
 - 补充资产制作与 AI 交接规范：主工具 Blender、Hyper3D 可选生成初稿、UE 实机验收；新增根目录 AGENTS.md 和 README 链接。
 - 交接文档本地链接与 Git 空白检查通过；没有调用生成服务、安装软件或制作模型。
