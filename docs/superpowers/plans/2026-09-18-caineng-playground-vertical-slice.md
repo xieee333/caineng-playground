@@ -1,6 +1,6 @@
 # 彩能游乐场第一版垂直切片实现计划
 
-> 历史计划：2026-09-21 起执行路线见 [UE 阶段计划](2026-09-21-ue-party-shooter.md)。本文 Unity 路线仅供追溯。
+> 历史计划：当前执行路线见 [异常街区 UE 阶段计划](2026-09-21-anomaly-district-ue.md)。本文 Unity 路线仅供追溯。
 
 > **面向 AI 代理的工作者：** 必需子技能：使用 `superpowers:subagent-driven-development`（推荐）或 `superpowers:executing-plans` 逐任务实现此计划。步骤使用复选框（`- [ ]`）语法来跟踪进度。
 
