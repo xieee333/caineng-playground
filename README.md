@@ -1,18 +1,8 @@
-# 彩能游乐场
+# 异常街区
 
-一款 6 人低竞技、高互动的多人 PvP 游乐场原型。
+UE多人异常互动乱斗项目。当前只使用两份现行规划：
 
-当前已确认的设计方向：
+- [项目总纲](docs/MASTER_PLAN.md)：产品、完整玩法、技术与内容扩展、交付路线。
+- [首个交付版计划](docs/FIRST_DELIVERY.md)：本批范围、UI与美术、执行清单、验收与真实状态。
 
-- 彩能喷射、钻地、上墙、弹跳和短时滞空
-- 非致命的击退、吸附、冻结、绑缚和道具互动
-- 轻量公共目标，不以击杀或硬性争夺为唯一胜负条件
-- 狂欢事件、玩具化枪械和多维度正向结算
-
-设计规格见 [`docs/superpowers/specs/2026-09-18-caineng-playground-design.md`](docs/superpowers/specs/2026-09-18-caineng-playground-design.md)。
-
-项目路线和实时进度：
-
-- [`docs/ROADMAP.md`](docs/ROADMAP.md)
-- [`docs/PROGRESS.md`](docs/PROGRESS.md)
-- [`docs/superpowers/specs/2026-09-18-caineng-playground-weapon-direction-design.md`](docs/superpowers/specs/2026-09-18-caineng-playground-weapon-direction-design.md)
+其他历史策划已移入 `docs/archive/2026-09-22-plan-reset/`，不是实施依据。`docs/testing/`、`docs/verification/` 与环境记录只作技术证据，不提供新的产品方向。文档完成不代表游戏功能完成。
